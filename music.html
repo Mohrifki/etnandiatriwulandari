@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="music.css">
+  <title>Semoga kamu suka ya</title>
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+      <img src="images/logo1.png" class="logo">
+      <ul>
+        <li><a href="">Maafin</a></li>
+        <li><a href="">Aku</a></li>
+        <li><a href="">Ayang</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="left-col">
+        <h1 style="color: black;">Jangan<br>Marah lagi<br>Sayang</h1>
+      </div>
+      <div class="right-col">
+        <p>Click here to Listen</p>
+        <img src="images/play.png" id="icon">
+      </div>
+    </div>
+  </div>
+
+  <audio id="mutiSong">
+    <source src="images/3.mp3" type="audio/mp3">
+  </audio>
+
+  <script>
+    var mutiSong = document.getElementById("mutiSong");
+    var icon = document.getElementById("icon");
+
+    icon.onclick = function(){
+      if(mutiSong.paused){
+        mutiSong.play();
+        icon.src = "images/pause.png";
+      }else{
+        mutiSong.pause();
+        icon.src = "images/play.png";
+      }
+    }
+  </script>
+  
+</body>
+</html>
